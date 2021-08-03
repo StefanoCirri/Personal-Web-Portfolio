@@ -1,0 +1,82 @@
+@import "config";
+@import "utilities";
+@import "button";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $primary-color;
+    font-family: $font-stack;
+    line-height: 1.6;
+}
+
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    scroll-snap-align: start;
+    margin-left: 100px;
+
+       h1{
+           font-size: 50px;
+           line-height: 1.2;
+       }
+
+       p{
+           margin: 20px 0;
+           font-size: 25px;
+           color: $secondary-color;
+       }
+    }
+a{
+    text-decoration: none;
+    color: $text-color;
+}
+
+.container-2{
+    max-width: 1100vh;
+    margin: 0 30px;
+    padding: 0 auto;
+}
+
+.homepage{
+    background-color: $primary-color;
+    color: $text-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul{
+            display: flex;
+            list-style: none;
+
+            li{
+                padding: 15px;
+
+                a:hover{
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}

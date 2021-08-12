@@ -1,0 +1,459 @@
+@import "config";
+@import "utilities";
+@import "button";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $primary-color;
+    font-family: $font-stack;
+    line-height: 1.6;
+}
+
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    scroll-snap-align: start;
+    margin-left: 100px;
+    padding: 20px 10%;
+
+       h1{
+           font-size: 60px;
+           line-height: 1.2;
+           color: $text-color;
+       }
+
+       p{
+           margin: 15px 0;
+           font-size: 30px;
+           color: $secondary-color;
+       }
+    }
+
+
+header{
+    background-color: $primary-color;
+    color: $text-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 95%;
+    padding: 20px 0;
+    top: 0;
+    z-index: 4;
+
+    .social-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        
+        .instagram-logo{
+            margin: 10px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        .twitter-logo{
+            margin: 10px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        .github-logo{
+            margin: 10px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        .linkedin-logo{
+            margin: 10px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    }
+
+
+    a{
+        text-decoration: none;
+        color: $text-color;
+    }
+    
+    nav{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        .menu-bars{
+            display: none;
+        }
+        
+        ul{
+            list-style: none;
+
+            li{
+                font-size: 23px;
+                display: inline-block;
+                padding: 0 28px;
+
+                a{
+                    transition: all .3s ease;
+                }
+
+                a:hover{
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+.home-content{
+
+    .dot-hello{
+        color: $secondary-color;
+        background: none;
+    }
+
+    .background-text{
+        position: relative;
+        right: 698px;
+        bottom: 38px;
+        align-items: center;
+        z-index: -1;
+        padding: 5px;
+
+        h1{
+            color: #2b7a772d;
+            font-size: 85px;
+            padding: 1px;
+            margin: 1px;
+            border: 1px;
+            transition: .3s;
+        }
+    }
+}
+
+.about-content{
+
+    display: flex;
+
+    h1{
+        font-size: 50px;
+
+        .dot-story{
+            color: $secondary-color;
+            background: none;
+        }
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+    .about-title{
+        position: relative;
+        bottom: 180px;
+    }
+
+    .shadow-1{
+        display: flex;
+        position: relative;
+        border: solid 5px #2b7a772d;
+        border-radius: 5%;
+        height: 320px;
+        width: 320px;
+        right: 490px;
+        bottom: 100px;
+        z-index: -1;
+    }
+
+    .shadow-2{
+        position: relative;
+        display: flex;
+        border: solid 5px #2b7a772d;
+        border-radius: 5%;
+        height: 320px;
+        width: 320px;
+        right: 360px;
+        top: 10px;
+        z-index: -1;
+    }
+
+    .shadow-3{
+        display: flex;
+        position: relative;
+        border: solid 5px #2b7a772d;
+        border-radius: 5%;
+        height: 320px;
+        width: 320px;
+        right: 250px;
+        top: 100px;
+        z-index: -1;
+    }
+
+    .about-text{
+        position: relative;
+        bottom: 50px;
+        right: 60px;
+
+        a{
+            color: #17252ade;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover{
+            transition: all .3s ease;
+            color: #def2f19f;
+        }
+
+        p{
+            padding: 10px;
+        }
+
+        .first-about-box{
+            position: relative;
+            display: flex;
+            border: solid 5px $secondary-color;
+            border-radius: 5%;
+            height: 320px;
+            width: 320px;
+            top: 450px;
+            right: 15px;
+        }
+
+        .second-about-box{
+            position: relative;
+            display: flex;
+            border: solid 5px $secondary-color;
+            border-radius: 5%;
+            height: 320px;
+            width: 320px;
+            left: 365px;
+            bottom: 50px;
+        }
+
+        .third-about-box{
+            display: flex;
+            position: relative;
+            border: solid 5px $secondary-color;
+            border-radius: 5%;
+            height: 320px;
+            width: 320px;
+            left: 730px;
+            bottom: 100px;
+        }
+    }
+}
+
+.contact-me-content{
+
+
+    .contact-me-box{
+        position: relative;
+        top: 35px;
+        right: 25%;
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        box-shadow: 0px 0px 20px #00000010;
+        background-color: $primary-color;
+        border: 5px solid $secondary-color;
+        border-radius: 5%;
+        margin-bottom: 20px;
+    }
+
+    .form-group{
+        width: 100%;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 700;
+
+        input,textarea{
+            width: 100%;
+            padding: 5px;
+            font-size: 18px;
+            border: 5px solid $secondary-color;
+            margin-top: 5px;
+            background-color: $primary-color;
+            font-family: "poppins";
+            font-weight: 700;
+            border-radius: .25rem;
+        }
+
+        input,textarea:invalid{
+
+            color: #e71d3598;
+        }
+    }
+
+    .contact-me-text{
+        position: relative;
+        padding: 30px;
+        right: 220px;
+
+        h1{
+            font-size: 50px;
+        }
+    }
+
+    .contact-me-text-mobile{
+        display: none;
+    }
+
+    textarea{
+        resize: vertical;
+    }
+
+    button[type="submit"]{
+        font-weight: 700;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 20px;
+        font-size: 24px;
+        font-family: "poppins";
+        color: $text-color;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: .3s ease background-color;
+        border-radius: .25rem;
+    }
+
+    button[type="submit"]:hover{
+        background-color: #0aff999c;
+    }
+
+    .instagram-logo{
+        position: relative;
+        display: flex;
+    }
+}
+
+.thanks{
+    display: none;
+}
+
+.social-section-2{
+    display: none;
+}
+
+@media screen and (max-width: 838px){
+
+    header{
+        display: none;
+    }
+
+    .home-content{
+
+        .home-text{
+            position: relative;
+            align-items: center;
+            right: 90px;
+            bottom: 50px;
+        }
+
+        .background-text{
+            display: none;
+        }
+    }
+
+    .about-content{
+
+        .about-title{
+            position: relative;
+            right: 100px;
+            bottom: 340px;
+            display: flex;
+        }
+
+        .about-text{
+
+            .first-about-box{
+                position: relative;
+                right: 260px;
+                top: 170px;
+                height: 280px;
+            }
+
+            .second-about-box{
+                position: relative;
+                left: -260px;
+                top: 190px;
+            }
+
+            .third-about-box{
+                position: relative;
+                top: 210px;
+                left: -260px;
+                height: 210px;
+            }
+        }
+
+        .shadow-1{
+            display: none;
+        }
+
+        .shadow-2{
+            display: none;
+        }
+
+        .shadow-3{
+            display: none;
+        }
+    }
+
+    .contact-me-content{
+        
+        .contact-me-box{
+            display: none;
+        }
+
+        .contact-me-text{
+            display: none;
+        }
+    }
+
+    .thanks{
+        display: flex;
+        position: relative;
+        bottom: 400px;
+        left: 100px;
+        color: $secondary-color;
+        
+        h1{
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1270px){
+
+    .contact-me-content{
+
+        .contact-me-box{
+            align-items: center;
+        }
+    }
+
+    .contact-me-text{
+        display: none;
+    }
+}
